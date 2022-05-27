@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript obJects</title>
+</head>
+<body>
+    <h>creating JavaScript obJects</h1>
+    <p id="demo"></p>
+<script>
+    var student ={
+        name :"Chris",
+        age :21,
+        studies:"ComputerScience",
+    };
+    document.getElementById("demo").innerHTML=student.name + "of the age" + student.age + "studies"+ student.studies;
+
+</script>
+<script>
+    var student = newobJect();
+    student.name = "chris",
+    student.age = 21,
+    student.studies = "ComputerScience",
+    document.getElementById("demo").innerHTML=student.name + "of the age" + student.age + "studies"+ student.studies;
+</script>
+
+<script>
+    function stud(name, age, studies){
+        this.name = name;
+        this.age = age;
+        this.studies = studies;
+    }
+    var student = stud("chris", 21, "ComputerScience");
+    document.getElementById("demo").innerHTML=student.name + "of the age" + student.age + "studies"+ student.studies;
+</script>
+</body>
+</html>
