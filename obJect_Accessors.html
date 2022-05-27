@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript obJects</title>
+</head>
+<body>
+    <h1> creating JavaScript obJects </h1>
+    <p id = "demo"> </p>
+<script>
+    var car ={
+        model: "BMW 320d",
+        color: "Navy Blue",
+        Fuel_Type: "Diesel",
+        getfuel(){
+            return this.fuel_type
+        },
+    };
+    document.getElementById("demo").innerHTML = car.fuel;
+</script>
+
+<script>
+    var car ={
+        model: "Audi A4",
+        Color: "Bright Red",
+        fuel_type: "",
+        set fuel(fuel){
+            this.fuel_type = fuel;
+        }
+    }
+    car.fuel = "petrol";
+    document.getElementById("demo").innerHTML = car.fuel_type;
+</script>
+</body>
+</html>
