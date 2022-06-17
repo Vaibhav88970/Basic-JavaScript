@@ -1,90 +1,25 @@
-<html>
-    <head> JavaScript </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EmailValidation</title>
+    <script>
+        function validate(){
+            var mail=document.getElementByID("text").value;
+            var regx=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+([a-z]+)([a-z]+)?$/
+            if(regx.text(mail)){
+                alert("you have provided a valid Email ID")
+                return true
+            }
+            else{
+                alert("Sorry! Incorrect Email ID")
+            }
+        }
+    </script>
+    </head>
 <body>
-    <p id ="demo.html"> </p>
-<script>
-    let cars = ["BMW", "VOlvo", "Honda"];
-    document.getElementById("demo").innerhtml = cars;
-    
-    let bmw = cars[0];
-    document.getElementById("demo").innerhtml = bmw;
-
-    //array length property
-
-    let last= cars[cars.length -1];
-    document.getElementById("demo").innerhtml = Honda;
-
-    carsforEach((item, index, array)=> {
-        console.log(item, index);});
-    //array methods
-    //tostring
-
-    document.getElementById("demo").innerhtml = cars.tostring;
-    
-    //pop(): Remove the last element from array
-
-    let last1 = cars.pop();
-    document.getElementById("demo").innerhtml= last1;
-    
-
-    let last2 = cars[cars.length -1];
-    console.log(last2);
-
-    //push function
-
-    cars.push("Audi");
-    document.getElementById("demo").innerhtml = cars;
-
-    //shift function
-
-    cars.shift();
-    document.getElementById("demo").innerhtml = cars;
-
-    //concat function
-
-    let bikes= ["Yamaha", "Suzuki", "Royal Enfield"];
-    let vehicles= cars.concat(bikes);
-
-    document.getElementById("demo").innerhtml = vehicles;
-
-   //Sort function
-    
-
-   vehicles.sort();
-   document.getElementById("demo").innerhtml = vehicles;
-
-   //reverse function
-
-   vehicles.reverse();
-   document.getElementById("demo").innerhtml = vehicles;
-
-   //array map function
-
-   let num1= [2,3,4,5,6,7]
-   let num2= num1.map(multiply);
-   function multiply(value){
-       return value*2;
-   }
-   document.getElementById("demo").innerhtml = num2;
-
-   //array filter function
-
-   let num3= num1.filter(comp);
-   function comp(value){
-       return value>4;
-    
-   }
-   document.getElementById("demo").innerhtml = num3;
-
-   //array reduce function
-
-   let num4= num1.reduce(sum);
-   function sum(total, value){
-       return total + value;
-    
-   }
-   document.getElementById("demo").innerhtml = num4;
-
-</script>
-</body>
+    <form>
+        <input id="text" placeholder="Email" type="text"><br>
+        <button onclick="validate" type="button">submit</button>
+    </form>
+    </body>
 </html>
