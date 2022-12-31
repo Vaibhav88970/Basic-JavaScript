@@ -1,3 +1,3 @@
 function firstCode(){
-    console.log(HelloWorld);
+    console.log(HelloWorld)
 }
